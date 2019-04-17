@@ -1,0 +1,1 @@
+@py.exe C:\Users\seb7426\python_text_adventure-master\pw.py %*
