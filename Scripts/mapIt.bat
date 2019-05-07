@@ -1,0 +1,1 @@
+@py.exe S:\Python_How_To_Automate\mapIt.py %*
