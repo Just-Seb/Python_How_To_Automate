@@ -8,7 +8,7 @@ def timer():
     time.sleep(delay)
     start_time = time.time()
     print('Go!!!!!!')
-    stop = input()
+    input()
     end_time = time.time()
     result = end_time - start_time
     print('Your reaction time was: ' + str(result))
@@ -19,5 +19,5 @@ answer = input()
 
 if answer == 'Y' or 'y':
     timer()
-else:
+elif answer == ' ':
     print('Have a good day!')
