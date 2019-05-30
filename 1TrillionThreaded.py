@@ -21,14 +21,14 @@ def letter_picker(version):
     wordFile.close()
 
 
-onefile = threading.Thread(target=letter_picker(), kwargs='1')
+onefile = threading.Thread(target=letter_picker('1'), args='1')
 onefile.start()
 
-twofile = threading.Thread(target=letter_picker(), kwargs='2')
+twofile = threading.Thread(target=letter_picker('2'), args='2')
 twofile.start()
 
-threefile = threading.Thread(target=letter_picker(), kwargs='3')
+threefile = threading.Thread(target=letter_picker('3'), args='3')
 threefile.start()
 
-fourfile = threading.Thread(target=letter_picker(), kwargs='4')
+fourfile = threading.Thread(target=letter_picker('4'), args='4')
 fourfile.start()
