@@ -5,8 +5,12 @@ import time
 import threading
 import string
 
-def letter_picker(version):
+all_start_time = time.time()
 
+def letter_picker(version):
+    
+    start_time = time.time()
+    
     choice = None
 
     file = 'BufferTrillion' + version + '.txt'
@@ -22,6 +26,12 @@ def letter_picker(version):
         choice = None
 
     wordFile.close()
+    
+    end_time = time.time()
+    total_time = end_time - start_time
+    total_time = str(total_time)
+    
+    print('It took ' + total_time + ' for thread ' + version)
 
 
 onefile = threading.Thread(target=letter_picker('1'), args=['1'])
@@ -35,3 +45,10 @@ threefile.start()
 
 fourfile = threading.Thread(target=letter_picker('4'), args=['4'])
 fourfile.start()
+
+total_end_time = time.time()
+
+time_taken = total_end_time - all_start_time
+time_taken = str(time_taken)
+
+print('It took for the whole program ' + time_taken)
