@@ -7,19 +7,22 @@ Connor = 'con9123@sd64.bc.ca'
 Jonah = 'jon9154@sd64.bc.ca'
 seb = 'sebastain.scurtescu@gmail.com'
 
-names = [default,dad,mom,Connor,Jonah,seb]
-
+names = ['default','dad','mom','Connor','Jonah','seb']
+emails = ['justseb3@gmail.coom','marius.scurtescu@gmail.com','zsoka.scurtescu@gmail.com','con9123@sd64.bc.ca','jon9154@sd64.bc.ca','sebastain.scurtescu@gmail.com']
+list_length = len(names)
 
 def send_email(recipient):
-    smtpObj = smtplib.SMTP('smtp.gmail.com',587)
+    smtpObj = smtplib.SMTP('smtp.gmail.com', 587)
     smtpObj.ehlo()
     smtpObj.starttls()
     print('which email do you want to send from?')
-    sender = str(inpt())
-    
-    for i in range(0,len(names)):
-        if sender == names[i]:
-            sender == names[i]
+    sender = str(input())
+    if sender == names[0]:
+        sender = emails[0]
+
+    for i in range(0, list_length):
+        if recipient == names[i]:
+            recipient = emails[i]
             break
 
     while True:
