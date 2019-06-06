@@ -1,8 +1,5 @@
 import smtplib, getpass
 
-
-names = [default,dad,mom,Connor,Jonah,seb]
-
 default = 'justseb3@gmail.com'
 dad = 'marius.scurtescu@gmail.com'
 mom = 'zsoka.scurtescu@gmail.com'
@@ -10,6 +7,7 @@ Connor = 'con9123@sd64.bc.ca'
 Jonah = 'jon9154@sd64.bc.ca'
 seb = 'sebastain.scurtescu@gmail.com'
 
+names = [default,dad,mom,Connor,Jonah,seb]
 
 
 def send_email(recipient):
