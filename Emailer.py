@@ -1,10 +1,28 @@
 import smtplib, getpass
 
 
+names = [default,dad,mom,Connor,Jonah,seb]
+
+default = 'justseb3@gmail.com'
+dad = 'marius.scurtescu@gmail.com'
+mom = 'zsoka.scurtescu@gmail.com'
+Connor = 'con9123@sd64.bc.ca'
+Jonah = 'jon9154@sd64.bc.ca'
+seb = 'sebastain.scurtescu@gmail.com'
+
+
+
 def send_email(recipient):
     smtpObj = smtplib.SMTP('smtp.gmail.com',587)
     smtpObj.ehlo()
     smtpObj.starttls()
+    print('which email do you want to send from?')
+    sender = str(inpt())
+    
+    for i in range(0,len(names)):
+        if sender == names[i]:
+            sender == names[i]
+            break
 
     while True:
         print('Enter your password:')
@@ -12,7 +30,8 @@ def send_email(recipient):
         password = str(password)
 
         try:
-            smtpObj.login('justseb3@gmail.com', password)
+            smtpObj.login(sender, password)
+            password = None
             break
         except smtplib.SMTPAuthenticationError:
             print('Try again bad password:/')
@@ -36,4 +55,3 @@ if answer == ' ' or answer == 'y' or answer == 'Y':
 
 elif answer == 'n' or answer == 'N':
     print("Ok have a nice day :)")
-
