@@ -8,10 +8,12 @@ Jonah = 'jon9154@sd64.bc.ca'
 seb = 'sebastain.scurtescu@gmail.com'
 
 names = ['default','dad','mom','Connor','Jonah','seb']
-emails = ['justseb3@gmail.coom','marius.scurtescu@gmail.com','zsoka.scurtescu@gmail.com','con9123@sd64.bc.ca','jon9154@sd64.bc.ca','sebastain.scurtescu@gmail.com']
+emails = ['justseb3@gmail.com','marius.scurtescu@gmail.com','zsoka.scurtescu@gmail.com','con9123@sd64.bc.ca','jon9154@sd64.bc.ca','sebastian.scurtescu@gmail.com']
 list_length = len(names)
 
+
 def send_email(recipient):
+
     smtpObj = smtplib.SMTP('smtp.gmail.com', 587)
     smtpObj.ehlo()
     smtpObj.starttls()
@@ -44,6 +46,7 @@ def send_email(recipient):
     ending = str(input())
     smtpObj.sendmail('justseb3@gmail.com', recipient, subject + '\n' + main_body + '\n' + ending)
     smtpObj.quit()
+    print('Sent!')
 
 
 print('Do you want to send an email? Y/n')
