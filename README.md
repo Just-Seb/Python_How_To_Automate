@@ -1,2 +1,2 @@
-# python_text_adventure
-Exercises for "Make Your Own Python Text Adventure"
+# Python_How_To_Automate
+My python programs from my ids from school
